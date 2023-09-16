@@ -1,6 +1,7 @@
 import Header from "../src/componets/Header/header.jsx";
 import Card from "../src/componets/cards/Card.jsx";
 import {DataForCardView } from './componets/data/dataForCards.js';
+import AddReviewer from './componets/addReviewers/addReviewer.jsx';
 import './App.css'
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
       />
     ))
   }
+
+  <AddReviewer />
 </div>
 
 

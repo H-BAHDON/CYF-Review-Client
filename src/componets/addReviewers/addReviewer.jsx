@@ -1,21 +1,63 @@
-import React from 'react';
+import { useState } from "react";
+import "./addReviewer.css";
 
-import './addReviewer.css';
+const AddReviewer = () => {
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState("");
 
+  const handleSubmit = async (e) => {
 
-const addReviewer = () => {
-    return (
-        <>
+    e.preventDefault();
+    try {
+      const res = await fetch("http://localhost:3001/reviews", {
+        method: "POST",
+        body: JSON.stringify({
+          title: title,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-<h1>The input element</h1>
+      if (res.status === 200) {
+        setTitle("");
+        setMessage("User created successfully");
+      } else {
+        setMessage("Some error occurred");
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"/>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"/>
-  <input type="submit" value="Submit"/>
-</form>
-        </>
-    );
-}
+  return (
+    <>
+      <h1>The input element</h1>
+
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="title">Title</label>
+        <input
+          type="text"
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Enter a title"
+        />
+
+        <label htmlFor="message">Message</label>
+        <input
+          type="text"
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Enter a message"
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+    </>
+  );
+};
+
+export default AddReviewer;
