@@ -1,0 +1,37 @@
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button.up {
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  button.down {
+    background-color: #dc3545;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  img.tumb-up,
+  img.tumb-down {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 5px;
+  }
