@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "../src/componets/Header/header.jsx";
+import Card from "../src/componets/cards/Card.jsx";
 
 function App() {
+
+  const fakeData = {
+    id: 1,
+    title: "Hello",
+    lang: "js",
+    describe: "testing this works"
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Card
+        title={fakeData.title}
+        lang={fakeData.lang}
+        describe={fakeData.describe}
+/>
     </div>
   );
 }
