@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
 .App-logo {
@@ -52,4 +55,6 @@
   transition: 0.3s;
   border-radius: 5px;
   display: flex;
+
 }
+
