@@ -1,6 +1,5 @@
 import React from "react";
 import CountLike from "../countLikes/CountLikes";
-import "./card.css";
 const Card = (props) => {
   return (
     <div className="card" style={{ width: "18rem" }}>
