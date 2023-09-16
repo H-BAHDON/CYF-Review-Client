@@ -12,7 +12,7 @@ const CountLikes = () => {
     setCountDown(countDown - 1);
   };
   return (
-    <div>
+    <div className="manCount">
       <button className="up" onClick={handleCounterUp}>
         <img
           alt="tumb-up_picture"
