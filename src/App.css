@@ -24,6 +24,16 @@
   color: white;
 }
 
+
+
+.cardsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +45,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.viewCard{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  display: flex
 }

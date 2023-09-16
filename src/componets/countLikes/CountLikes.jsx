@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import "./CountLike.css"
+import './countLike.css'
 
 const CountLikes = () => {
   const [countUp, setCountUp] = useState(0);
